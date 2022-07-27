@@ -1,7 +1,4 @@
-// Whole Page
-function createDOM(...cards){
-    result = 
-`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,12 +11,12 @@ function createDOM(...cards){
         <h1>My Team</h1>
     </div>
     <div class="teamMembers">
-    ${cards}
+        <a href="https://github.com/H0PE467"></a>
     </div>
 </body>
 
 <style>
-    
+   
     *{
         margin: 0;
         padding: 0;
@@ -33,7 +30,7 @@ function createDOM(...cards){
         text-align: center;
     }
 
-    h2,h3,p,a{
+    h2,h3,p{
         margin-left: 15px;
     }
 
@@ -71,54 +68,7 @@ function createDOM(...cards){
         background-color: white;
         padding-top: 15px;
     }
+
+
 </style>
 </html>
-`;
-
-    return result;
-}
-
-// Card
-
-function createCard(name,id, email, role, additional = '') {
-
-    var moreInfo = ``;
-
-    if(role == 'Engineer'){
-        moreInfo = `<a href="https://github.com/${additional}"> Github: ${additional} </a>`;
-    }else if(role == 'Intern'){
-        moreInfo = `<p> School: ${additional} </p>`;
-    }
-
-    let result =
-`<div class="card">
-<div class="position">
-    <h2>${name}</h2>  
-    <h3>${role}</h3>
-</div>
-<div class="info">
-    <p> Id: ${id}</p>
-    <a href="mailto:${email}" target="_blank" > Email: ${email} </a>\n
-    ${moreInfo}
-</div>
-</div>
-`;
-    return result;
-}
-
-
-module.exports = {createDOM,createCard}
-
-
-/* 
-<div class="card">
-    <div class="position">
-        <h2>Name</h2>  
-        <h3>Manager</h3>
-    </div>
-    <div class="info">
-        <p class="id"> id: </p>
-        <p class="email"> email: </p>
-        <p class="github">github: </p>
-    </div>
-</div> */
