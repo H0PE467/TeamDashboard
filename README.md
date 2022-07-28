@@ -17,3 +17,5 @@ https://github.com/H0PE467/TeamDashboard
 ![Screenshot of Function](/assets/ProjectScreeshot.PNG)
 
 ## Demo Video
+
+https://youtu.be/_2zw_rJx1P8
