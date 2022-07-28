@@ -234,6 +234,10 @@ const main = async() => {
 
     var htmlContent = createDOM(arrayOfCards);
 
+    if (!fs.existsSync('./dist')) {
+        fs.mkdirSync('./dist')
+    }
+
     fs.writeFile('./dist/my-team.html', htmlContent, (error) => { /* handle error */ });
 }
 
